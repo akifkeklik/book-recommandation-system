@@ -4,6 +4,25 @@
 
 ---
 
+## 📱 Uygulama Arayüzü / App Interface
+
+<table>
+  <tr>
+    <td align="center"><b>Dark Mode</b></td>
+    <td align="center"><b>Light Mode</b></td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="assets/dark-mode.png" width="300" alt="Dark Mode Screenshot">
+    </td>
+    <td align="center">
+      <img src="assets/light-mode.png" width="300" alt="Light Mode Screenshot">
+    </td>
+  </tr>
+</table>
+
+---
+
 ## 🚀 Öne Çıkan Özellikler
 
 ### 📱 Mobil (Flutter)
