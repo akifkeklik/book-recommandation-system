@@ -1,0 +1,66 @@
+{
+    "appTitle": "Bookworm",
+    "@appTitle": {
+      "description": "The title of the application"
+    },
+    "home": "Home",
+    "library": "Library",
+    "favorites": "Favorites",
+    "profile": "Profile",
+    "settings": "Settings",
+    "visuals": "Visuals",
+    "themeMode": "Theme Mode",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System",
+    "accentColor": "Accent Color",
+    "language": "Language",
+    "selectLanguage": "Select Language",
+    "general": "General",
+    "appearance": "Appearance",
+    "notifications": "Notifications",
+    "account": "Account",
+    "signOut": "Sign Out",
+    "joinedIn": "Joined in {year}",
+    "@joinedIn": {
+      "placeholders": {
+        "year": {
+            "type": "String"
+        }
+      }
+    },
+    "read": "Read",
+    "books": "Books",
+    "goodMorning": "Good Morning,",
+    "findNextBook": "Find Your Next Book",
+    "speciallyForYou": "Specially For You",
+    "popularBooks": "Popular Books",
+    "couldNotFetchBooks": "Could not fetch books. Please try again later.",
+    "browseLibrary": "Browse Library",
+    "searchHint": "Search by title or author...",
+    "allCategories": "All",
+    "noBooksFound": "No books found.",
+    "yourFavorites": "Your Favorites",
+    "noFavoritesYet": "No Favorites Yet",
+    "noFavoritesHint": "Tap the heart on any book to save it here.",
+    "couldNotLoadFavorites": "Could not load your favorites.",
+    "couldNotLoadBookDetails": "Could not load book details.",
+    "toggleFavorite": "Toggle Favorite",
+    "byAuthor": "by {author}",
+    "@byAuthor": {
+      "placeholders": {
+        "author": {
+          "type": "String"
+        }
+      }
+    },
+    "description": "Description",
+    "myList": "My List",
+    "youMightAlsoLike": "You Might Also Like",
+    "rating": "Rating",
+    "popularity": "Popularity",
+    "category": "Category",
+    "chooseInterests": "Choose Your Interests",
+    "chooseInterestsHint": "Select at least one category to get personalized book recommendations.",
+    "continueButton": "Continue"
+}
