@@ -1,6 +1,6 @@
-# 📚 SonKitap (Bookworm)
+# 📚 Kitap Öneri Sistemi
 
-**SonKitap**, yapay zeka destekli, kişiselleştirilmiş kitap önerileri sunan modern bir mobil uygulamadır. **Flutter** (UI) ve **Python Flask** (ML Backend) teknolojilerini birleştirerek kullanıcının okuma zevkine en uygun kitapları sunar.
+**Kitap Öneri Sistemi**, yapay zeka destekli, kişiselleştirilmiş kitap önerileri sunan modern bir mobil uygulamadır. **Flutter** (UI) ve **Python Flask** (ML Backend) teknolojilerini birleştirerek kullanıcının okuma zevkine en uygun kitapları sunar.
 
 ---
 
