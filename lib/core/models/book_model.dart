@@ -32,4 +32,17 @@ class Book {
       description: json['description'],
     );
   }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'title': title,
+      'author': author,
+      'cover_image_url': coverImageUrl,
+      'category': category,
+      'rating': rating,
+      'popularity': popularity,
+      'description': description,
+    };
+  }
 }

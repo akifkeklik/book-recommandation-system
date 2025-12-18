@@ -61,7 +61,7 @@ class _BookListItem extends StatelessWidget {
       clipBehavior: Clip.antiAlias,
       child: InkWell(
         onTap: () {
-          context.go('/book/${book.id}', extra: heroTag);
+          context.push('/book/${book.id}', extra: heroTag);
         },
         child: Padding(
           padding: const EdgeInsets.all(12.0),

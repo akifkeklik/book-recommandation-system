@@ -75,7 +75,7 @@ class _ProfileView extends StatelessWidget {
             title: Text(l10n.appearance),
             subtitle: Text(l10n.visuals),
             trailing: const Icon(Icons.chevron_right),
-            onTap: () => context.go('/settings'),
+            onTap: () => context.push('/settings'), // FIXED: Uses push for history
           ),
           ListTile(
             leading: const Icon(Icons.notifications_outlined),
