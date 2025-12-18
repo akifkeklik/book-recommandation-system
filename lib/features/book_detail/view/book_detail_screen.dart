@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:go_router/go_router.dart';
-import 'package:sonkitap/l10n/app_localizations.dart'; // Corrected Import
+import 'package:flutter_animate/flutter_animate.dart';
+import 'package:sonkitap/l10n/app_localizations.dart';
 import '../viewmodel/book_detail_viewmodel.dart';
 import '../../../core/models/book_model.dart';
-import '../../../core/widgets/book_card.dart'; // Correctly imported shared widget
+import '../../../core/widgets/book_card.dart';
 
 class BookDetailScreen extends StatelessWidget {
   final int bookId;
@@ -137,18 +138,24 @@ class _ActionButtons extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 12),
               side: BorderSide(color: theme.colorScheme.primary),
             ),
-          ),
+          )
+              .animate()
+              .fadeIn(delay: 300.ms, duration: 400.ms)
+              .slideX(begin: -0.1, end: 0),
         ),
         const SizedBox(width: 16),
         Expanded(
           child: FilledButton.icon(
             icon: Icon(isRead ? Icons.check_circle : Icons.book_online),
-            label: Text(isRead ? l10n.read : l10n.read), // Reuse "Read" string, or add "Mark as Read"
+            label: Text(isRead ? l10n.read : l10n.read),
             style: FilledButton.styleFrom(
               backgroundColor: isRead ? theme.colorScheme.tertiary : theme.colorScheme.primary,
             ),
             onPressed: () => viewModel.toggleRead(),
-          ),
+          )
+              .animate()
+              .fadeIn(delay: 400.ms, duration: 400.ms)
+              .slideX(begin: 0.1, end: 0),
         ),
       ],
     );

@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'package:shimmer/shimmer.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:sonkitap/l10n/app_localizations.dart'; 
 import '../viewmodel/home_viewmodel.dart';
 import '../../../core/models/book_model.dart';
 import '../../../core/widgets/book_card.dart';
+import '../../../core/widgets/animated_empty_state.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -128,9 +130,13 @@ class _BookList extends StatelessWidget {
     }
 
     if (books.isEmpty) {
-      return const SizedBox(
-        height: 100,
-        child: Center(child: Text("Kitap bulunamadı.")),
+      return SizedBox(
+        height: 150,
+        child: AnimatedEmptyState(
+          title: 'Kitap bulunamadı',
+          subtitle: 'Henüz bu kategoride kitap yok',
+          icon: Icons.library_books_outlined,
+        ),
       );
     }
 
@@ -145,6 +151,7 @@ class _BookList extends StatelessWidget {
             book: books[index], 
             heroPrefix: isLarge ? 'featured' : 'popular',
             isLarge: isLarge,
+            animationIndex: index,
           );
         },
       ),
