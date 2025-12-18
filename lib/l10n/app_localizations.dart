@@ -379,6 +379,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Continue'**
   String get continueButton;
+
+  /// No description provided for @addedToFavorites.
+  ///
+  /// In en, this message translates to:
+  /// **'Added to Favorites'**
+  String get addedToFavorites;
+
+  /// No description provided for @removedFromFavorites.
+  ///
+  /// In en, this message translates to:
+  /// **'Removed from Favorites'**
+  String get removedFromFavorites;
+
+  /// No description provided for @markedAsRead.
+  ///
+  /// In en, this message translates to:
+  /// **'Marked as Read'**
+  String get markedAsRead;
+
+  /// No description provided for @markedAsUnread.
+  ///
+  /// In en, this message translates to:
+  /// **'Marked as Unread'**
+  String get markedAsUnread;
 }
 
 class _AppLocalizationsDelegate

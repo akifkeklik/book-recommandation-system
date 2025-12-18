@@ -155,4 +155,16 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get continueButton => 'Devam Et';
+
+  @override
+  String get addedToFavorites => 'Favorilere Eklendi';
+
+  @override
+  String get removedFromFavorites => 'Favorilerden Çıkarıldı';
+
+  @override
+  String get markedAsRead => 'Okundu Olarak İşaretlendi';
+
+  @override
+  String get markedAsUnread => 'Okunmadı Olarak İşaretlendi';
 }

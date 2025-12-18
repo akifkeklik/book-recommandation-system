@@ -62,5 +62,9 @@
     "category": "Category",
     "chooseInterests": "Choose Your Interests",
     "chooseInterestsHint": "Select at least one category to get personalized book recommendations.",
-    "continueButton": "Continue"
+    "continueButton": "Continue",
+    "addedToFavorites": "Added to Favorites",
+    "removedFromFavorites": "Removed from Favorites",
+    "markedAsRead": "Marked as Read",
+    "markedAsUnread": "Marked as Unread"
 }

@@ -154,4 +154,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get continueButton => 'Continue';
+
+  @override
+  String get addedToFavorites => 'Added to Favorites';
+
+  @override
+  String get removedFromFavorites => 'Removed from Favorites';
+
+  @override
+  String get markedAsRead => 'Marked as Read';
+
+  @override
+  String get markedAsUnread => 'Marked as Unread';
 }

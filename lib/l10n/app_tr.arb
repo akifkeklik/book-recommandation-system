@@ -45,5 +45,9 @@
     "category": "Kategori",
     "chooseInterests": "İlgi Alanlarınızı Seçin",
     "chooseInterestsHint": "Kişiselleştirilmiş kitap önerileri almak için en az bir kategori seçin.",
-    "continueButton": "Devam Et"
+    "continueButton": "Devam Et",
+    "addedToFavorites": "Favorilere Eklendi",
+    "removedFromFavorites": "Favorilerden Çıkarıldı",
+    "markedAsRead": "Okundu Olarak İşaretlendi",
+    "markedAsUnread": "Okunmadı Olarak İşaretlendi"
 }

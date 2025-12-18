@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'package:sonkitap/l10n/app_localizations.dart'; // Corrected Import
+
 import '../viewmodel/profile_viewmodel.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -27,6 +28,10 @@ class _ProfileView extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_rounded),
+          onPressed: () => context.go('/home'),
+        ),
         title: Text(l10n.profile),
       ),
       body: ListView(
@@ -44,11 +49,15 @@ class _ProfileView extends StatelessWidget {
                 children: [
                   Text(
                     'Book Lover',
-                    style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
+                    style: theme.textTheme.titleLarge?.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                   Text(
                     l10n.joinedIn('2024'),
-                    style: theme.textTheme.bodyMedium?.copyWith(color: theme.colorScheme.onSurfaceVariant),
+                    style: theme.textTheme.bodyMedium?.copyWith(
+                      color: theme.colorScheme.onSurfaceVariant,
+                    ),
                   ),
                 ],
               ),
@@ -59,8 +68,18 @@ class _ProfileView extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              _StatCounter(label: l10n.favorites, count: viewModel.isLoading ? '-' : viewModel.favoriteCount.toString()),
-              _StatCounter(label: l10n.read, count: viewModel.isLoading ? '-' : viewModel.readCount.toString()),
+              _StatCounter(
+                label: l10n.favorites,
+                count: viewModel.isLoading
+                    ? '-'
+                    : viewModel.favoriteCount.toString(),
+              ),
+              _StatCounter(
+                label: l10n.read,
+                count: viewModel.isLoading
+                    ? '-'
+                    : viewModel.readCount.toString(),
+              ),
             ],
           ),
           const SizedBox(height: 16),
@@ -68,14 +87,18 @@ class _ProfileView extends StatelessWidget {
           const SizedBox(height: 16),
           Text(
             l10n.general,
-            style: theme.textTheme.titleSmall?.copyWith(color: theme.colorScheme.primary, fontWeight: FontWeight.bold),
+            style: theme.textTheme.titleSmall?.copyWith(
+              color: theme.colorScheme.primary,
+              fontWeight: FontWeight.bold,
+            ),
           ),
           ListTile(
             leading: const Icon(Icons.palette_outlined),
             title: Text(l10n.appearance),
             subtitle: Text(l10n.visuals),
             trailing: const Icon(Icons.chevron_right),
-            onTap: () => context.push('/settings'), // FIXED: Uses push for history
+            onTap: () =>
+                context.push('/settings'), // FIXED: Uses push for history
           ),
           ListTile(
             leading: const Icon(Icons.notifications_outlined),
@@ -88,11 +111,17 @@ class _ProfileView extends StatelessWidget {
           const SizedBox(height: 16),
           Text(
             l10n.account,
-             style: theme.textTheme.titleSmall?.copyWith(color: theme.colorScheme.primary, fontWeight: FontWeight.bold),
+            style: theme.textTheme.titleSmall?.copyWith(
+              color: theme.colorScheme.primary,
+              fontWeight: FontWeight.bold,
+            ),
           ),
           ListTile(
             leading: Icon(Icons.logout, color: theme.colorScheme.error),
-            title: Text(l10n.signOut, style: TextStyle(color: theme.colorScheme.error)),
+            title: Text(
+              l10n.signOut,
+              style: TextStyle(color: theme.colorScheme.error),
+            ),
             onTap: () {},
           ),
         ],
@@ -110,7 +139,12 @@ class _StatCounter extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text(count, style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold)),
+        Text(
+          count,
+          style: Theme.of(
+            context,
+          ).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold),
+        ),
         const SizedBox(height: 4),
         Text(label, style: Theme.of(context).textTheme.bodyMedium),
       ],

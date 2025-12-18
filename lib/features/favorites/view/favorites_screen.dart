@@ -3,9 +3,9 @@ import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:sonkitap/l10n/app_localizations.dart'; // Corrected Import
-import '../viewmodel/favorites_viewmodel.dart';
+
 import '../../../core/models/book_model.dart';
-import '../../book_detail/view/book_detail_screen.dart';
+import '../viewmodel/favorites_viewmodel.dart';
 
 class FavoritesScreen extends StatelessWidget {
   const FavoritesScreen({super.key});
@@ -28,9 +28,7 @@ class _FavoritesView extends StatelessWidget {
     final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text(l10n.favorites),
-      ),
+      appBar: AppBar(title: Text(l10n.favorites)),
       body: RefreshIndicator(
         onRefresh: viewModel.loadFavorites,
         child: _buildBody(context, viewModel, l10n),
@@ -38,7 +36,11 @@ class _FavoritesView extends StatelessWidget {
     );
   }
 
-  Widget _buildBody(BuildContext context, FavoritesViewModel viewModel, AppLocalizations l10n) {
+  Widget _buildBody(
+    BuildContext context,
+    FavoritesViewModel viewModel,
+    AppLocalizations l10n,
+  ) {
     if (viewModel.isLoading) {
       return const _FavoritesListSkeleton();
     }
@@ -124,7 +126,11 @@ class _FavoriteBookListItem extends StatelessWidget {
                   width: 70,
                   height: 100,
                   fit: BoxFit.cover,
-                  errorBuilder: (_, __, ___) => Container(width: 70, height: 100, color: Colors.grey[300]),
+                  errorBuilder: (_, __, ___) => Container(
+                    width: 70,
+                    height: 100,
+                    color: Colors.grey[300],
+                  ),
                 ),
               ),
               const SizedBox(width: 16),
@@ -132,9 +138,21 @@ class _FavoriteBookListItem extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(book.title, style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold), maxLines: 2, overflow: TextOverflow.ellipsis),
+                    Text(
+                      book.title,
+                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                    ),
                     const SizedBox(height: 4),
-                    Text(book.author, style: Theme.of(context).textTheme.bodyMedium, maxLines: 1, overflow: TextOverflow.ellipsis),
+                    Text(
+                      book.author,
+                      style: Theme.of(context).textTheme.bodyMedium,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                    ),
                   ],
                 ),
               ),
@@ -152,8 +170,11 @@ class _FavoritesListSkeleton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final baseColor = Theme.of(context).colorScheme.surfaceContainerHighest.withOpacity(0.5); // Updated surfaceVariant
-    final highlightColor = Theme.of(context).colorScheme.surface.withOpacity(0.8);
+    final baseColor = Theme.of(context).colorScheme.surfaceContainerHighest
+        .withOpacity(0.5); // Updated surfaceVariant
+    final highlightColor = Theme.of(
+      context,
+    ).colorScheme.surface.withOpacity(0.8);
 
     return Shimmer.fromColors(
       baseColor: baseColor,
@@ -169,13 +190,24 @@ class _FavoritesListSkeleton extends StatelessWidget {
               padding: const EdgeInsets.all(12.0),
               child: Row(
                 children: [
-                  Container(width: 70, height: 100, decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(8))),
+                  Container(
+                    width: 70,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                  ),
                   const SizedBox(width: 16),
                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Container(height: 16, width: double.infinity, color: Colors.white),
+                        Container(
+                          height: 16,
+                          width: double.infinity,
+                          color: Colors.white,
+                        ),
                         const SizedBox(height: 8),
                         Container(height: 14, width: 150, color: Colors.white),
                       ],
