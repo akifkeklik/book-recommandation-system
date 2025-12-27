@@ -1,6 +1,6 @@
-# 📚 Kitap Öneri Sistemi
+# 📚 Bookalemun
 
-**Kitap Öneri Sistemi**, yapay zeka destekli, kişiselleştirilmiş kitap önerileri sunan modern bir mobil uygulamadır. **Flutter** (UI) ve **Python Flask** (ML Backend) teknolojilerini birleştirerek kullanıcının okuma zevkine en uygun kitapları sunar.
+**Bookalemun**, yapay zeka destekli, kişiselleştirilmiş kitap önerileri sunan modern bir mobil uygulamadır. **Flutter** (UI) ve **Python Flask** (ML Backend) teknolojilerini birleştirerek kullanıcının okuma zevkine en uygun kitapları sunar.
 
 ---
 

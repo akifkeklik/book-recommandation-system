@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
 
           return MaterialApp.router(
             routerConfig: appRouter,
-            title: 'Bookworm', // V5.0: New App Name
+            title: 'Bookalemun', // Updated App Name
             debugShowCheckedModeBanner: false,
             // V5.0: Theme is now dynamically built based on ViewModel state
             theme: AppTheme.getLightTheme(settingsViewModel.themeColor),
